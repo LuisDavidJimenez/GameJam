@@ -153,7 +153,9 @@ header h1 {
   padding: 8px;
 }
 
-.nav-game li:active {
+.nav-game a:active,
+.nav-game a:hover,
+.nav-game a:focus {
   color: #80ff00;
   text-shadow: 0 0 8px #ff4500;
 }
