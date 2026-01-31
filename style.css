@@ -1,13 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Belgrano&family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belgrano&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+body,
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* Estilos base para móviles */
 body {
   background-color: #121212;
   color: white;
   font-family: 'Segoe UI', sans-serif;
-  margin: 0px;
-  padding: 5px;
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.05) 100%),
+    url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  box-shadow: inset 0 -20px 30px rgba(0, 0, 0, 0.1);
 }
 
 hr.especial {
@@ -21,7 +30,7 @@ hr.especial {
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .historia .texto {
-  font-family: "Caveat", cursive;
+  font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 400;
   font-style: normal;
   text-align: justify;
@@ -32,11 +41,13 @@ hr.especial {
   font-family: "Belgrano", serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.historia .texto h4 {
   text-align: center;
   margin: 5px;
+}
+
+.historia .texto .columnas {
+  column-count: 2;
+  column-gap: 20px;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -79,23 +90,21 @@ hr.especial {
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+header {
+  background-color: black;
+}
+
 header h1 {
   text-align: center;
   font-size: 2.5rem;
-  margin: 10px;
-  color: #ff4500;
+  color: #80ff00;
   text-shadow: 0 0 10px #ff4500;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 .nav-game {
-  background: #1a1a1a;
-  border-bottom: 2px solid #ff4500;
   padding: 10px 0;
-  margin-bottom: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  margin: auto;
 }
 
 .nav-game ul {
@@ -121,7 +130,7 @@ header h1 {
 }
 
 .nav-game a:active {
-  color: #ff4500;
+  color: #80ff00;
   text-shadow: 0 0 8px #ff4500;
 }
 
@@ -129,9 +138,9 @@ header h1 {
 
 .container-periodico {
   overflow: hidden;
-  margin-bottom: 10px;
   display: flex;
   justify-content: center;
+  padding: 5px;
 }
 
 .container-periodico img {
@@ -160,16 +169,11 @@ header h1 {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: #0a0a0a;
-  /* Gradiente que simula un foco de luz central */
-  background: radial-gradient(circle at 50% 20%,
-      rgb(56, 56, 56) 0%,
-      rgba(10, 10, 10, 1) 80%);
-  padding: 10px 10px;
+  padding: 20px 20px;
 }
 
 .personaje-card {
-  background: rgba(30, 30, 30, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   border-radius: 12px;
@@ -182,7 +186,8 @@ header h1 {
 .personaje-card[open] {
   max-height: 1000px;
   transition: max-height 0.8s ease-in-out;
-  background: #252525;
+  background-color: rgba(0, 0, 0, 0.8);
+
   border-color: #ff4500;
 }
 
