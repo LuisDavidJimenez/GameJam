@@ -119,7 +119,7 @@ header {
 
 header h1 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #80ff00;
   text-shadow: 0 0 10px #ff4500;
 }
@@ -152,7 +152,7 @@ header h1 {
   padding: 8px 12px;
 }
 
-.nav-game a:active {
+.nav-game li:active {
   color: #80ff00;
   text-shadow: 0 0 8px #ff4500;
 }
