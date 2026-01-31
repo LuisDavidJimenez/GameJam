@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Belgrano&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Belgrano&family=Caveat:wght@400..700&display=swap');
 /* Estilos base para móviles */
 body {
   background-color: #121212;
@@ -22,11 +21,22 @@ hr.especial {
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .historia .texto {
-  font-family: "Belgrano", serif;
+  font-family: "Caveat", cursive;
   font-weight: 400;
   font-style: normal;
   text-align: justify;
   padding: 0px 10px;
+}
+
+.historia .texto h4 {
+  font-family: "Belgrano", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.historia .texto h4 {
+  text-align: center;
+  margin: 5px;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
