@@ -221,13 +221,6 @@ summary::-webkit-details-marker {
   border: 2px solid #80ff00;
 }
 
-.avatar-relacion {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid #80ff00;
-}
-
 .nombre-izq {
   font-size: 1.2rem;
   font-weight: bold;
@@ -262,6 +255,10 @@ summary::-webkit-details-marker {
   transition: opacity 0.4s ease;
 }
 
+.contenido p {
+  margin-bottom: 5px;
+}
+
 .personaje-card[open] .contenido {
   opacity: 1;
 }
@@ -278,36 +275,25 @@ summary::-webkit-details-marker {
 .relaciones h2 {
   margin: 0px;
   text-align: center;
-  font-size: bold;
+  font-weight: bold;
 }
 
 .relaciones .imgs {
   display: flex;
   gap: 10px;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
   margin: auto;
+  flex-wrap: wrap;
   font-size: 20px;
   margin: 5px;
 }
 
-.relaciones .imgs .bien {
-  display: flex;
-  gap: 3px;
-}
-
+.relaciones .imgs .bien,
 .relaciones .imgs .mal {
   display: flex;
+  flex-wrap: wrap;
   gap: 3px;
-}
-
-.relaciones .imgs-2 {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  font-size: 20px;
 }
 
 .relaciones-mal img {
@@ -316,4 +302,15 @@ summary::-webkit-details-marker {
 
 .relaciones-bien img {
   border: 3px solid #80ff00;
+}
+
+.avatar-relacion {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #80ff00;
+}
+
+.avatar-relacion:active {
+  transform: scale(1.2);
 }
