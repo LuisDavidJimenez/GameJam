@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Belgrano&display=swap');
+
+/* Estilos base para móviles */
+body {
+  background-color: #121212;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0px;
+  padding: 5px;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+hr.especial {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #ff4500, #ffd700, #ff4500, transparent);
+  margin: 10px auto;
+  width: 95%;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.historia .texto {
+  font-family: "Belgrano", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+  padding: 0px 10px;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.cinta-policial {
+  background: #ffd700;
+  color: #000;
+  font-family: 'Arial Black', sans-serif;
+  padding: 12px 0;
+  margin: 40px -10%;
+  transform: rotate(-3deg);
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  display: flex;
+}
+
+.cinta-scroll {
+  display: flex;
+  width: fit-content;
+  animation: scroll-infinito 5s linear infinite;
+}
+
+.cinta-scroll span {
+  white-space: nowrap;
+  padding-right: 10px;
+  font-size: 1.1rem;
+}
+
+@keyframes scroll-infinito {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 10px;
+  color: #ff4500;
+  text-shadow: 0 0 10px #ff4500;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+.nav-game {
+  background: #1a1a1a;
+  border-bottom: 2px solid #ff4500;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-game ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav-game li {
+  display: inline-block;
+}
+
+.nav-game a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: bold;
+  padding: 8px 12px;
+}
+
+.nav-game a:active {
+  color: #ff4500;
+  text-shadow: 0 0 8px #ff4500;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.container-periodico {
+  overflow: hidden;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-periodico img {
+  width: 100%;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: entradaConParones 1.5s ease-out forwards;
+}
+
+@keyframes entradaConParones {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.container-personajes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #0a0a0a;
+  /* Gradiente que simula un foco de luz central */
+  background: radial-gradient(circle at 50% 20%,
+      rgb(56, 56, 56) 0%,
+      rgba(10, 10, 10, 1) 80%);
+  padding: 10px 10px;
+}
+
+.personaje-card {
+  background: rgba(30, 30, 30, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  overflow: hidden;
+
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), background 0.3s;
+  max-height: 80px;
+}
+
+.personaje-card[open] {
+  max-height: 1000px;
+  transition: max-height 0.8s ease-in-out;
+  background: #252525;
+  border-color: #ff4500;
+}
+
+summary {
+  padding: 15px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  height: 50px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #80ff00;
+}
+
+.avatar-izq {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 15px;
+  border: 2px solid #80ff00;
+}
+
+.avatar-relacion {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #80ff00;
+}
+
+.nombre-izq {
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: end;
+}
+
+.nombre {
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.flecha,
+.flecha-izq {
+  transition: transform 0.3s ease;
+  color: #ff0000;
+}
+
+.personaje-card[open] .flecha {
+  transform: rotate(90deg);
+}
+
+.personaje-card[open] .flecha-izq {
+  transform: rotate(-90deg);
+}
+
+.contenido {
+  padding: 20px;
+  border-top: 1px solid #333;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.personaje-card[open] .contenido {
+  opacity: 1;
+}
+
+.full-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.relaciones h2 {
+  margin: 0px;
+  text-align: center;
+  font-size: bold;
+}
+
+.relaciones .imgs {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.relaciones .imgs .bien {
+  display: flex;
+  gap: 3px;
+}
+
+.relaciones .imgs .mal {
+  display: flex;
+  gap: 3px;
+}
+
+.relaciones .imgs-2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 20px;
+}
+
+.relaciones-mal img {
+  border: 3px solid red;
+}
+
+.relaciones-bien img {
+  border: 3px solid #80ff00;
+}
