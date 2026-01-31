@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>El Dominio de Aurea</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./favicon.png" type="image/png">
+    <script src="./js/main.js"></script>
 </head>
 
 <body>
@@ -24,7 +25,7 @@
     <main>
         <div class="historia" id="historia">
             <section class="container-periodico">
-                <img src="./Presentación Periodismo Minimalista Blanco y Negro.png" alt="Periodico" width="100%">
+                <img src="./imgs/Periodico.png" alt="Periodico" width="100%">
             </section>
             <div class="texto">
                 <h4><u><i>TRAGEDIA EN DIRECTO <br> EL REY SIMBA HA SIDO ASESINADO</i></u></h4>
@@ -178,9 +179,8 @@
                         <strong>Historia:</strong>
                         Coneja ha pasado años siendo la sombra invisible del Rey Simba, custodiando las llaves que
                         abren cada puerta del palacio. Bajo su apariencia inofensiva se esconde la mente más informada
-                        de Aurea, capaz de escuchar secretos tras las cortinas que harían temblar el trono. Su lealtad
-                        cambió al unirse al Koala, con quien comparte un romance prohibido y el deseo de escapar de la
-                        opresión de los depredadores.
+                        de Aurea, capaz de escuchar secretos tras las cortinas que harían temblar el trono.
+                        No confia en nadie externo al círculo real y siempre está un paso por delante.
                     </p>
 
                     <div class="relaciones">
@@ -224,7 +224,7 @@
                         alt="Cuerva" class="full-img">
                     <p>
                         <strong>Trabajo:</strong>
-                        Modelo de OnlyFans.
+                        Millonaria Mantenida.
                     </p>
 
                     <p>
@@ -383,14 +383,14 @@
             </details>
         </section>
 
-        <div class="cinta-policial">
+        <div class="cinta-policial-izq">
             <div class="cinta-scroll">
                 <span>ESCENA DEL CRIMEN - SOLO PERSONAL AUTORIZADO -</span>
                 <span>ESCENA DEL CRIMEN - SOLO PERSONAL AUTORIZADO -</span>
             </div>
         </div>
 
-        <div class="Informacion" id="Informacion">
+        <div id="Informacion">
             <section class="container-reino texto">
                 <h2><u><i>El Dominio de Aurea</i></u></h2>
                 <p>Fundado bajo el primer rugido de la dinastía de Simba, Aurea es el corazón dorado del mundo animal.
@@ -398,6 +398,65 @@
                     Brindis. Durante décadas, la paz se mantuvo gracias a la "Ley de la Melena", un pacto de respeto
                     mutuo entre depredadores y presas que convirtió a esta nación en el baluarte de la civilización.
                 </p>
+            </section>
+        </div>
+
+        <div class="cinta-policial">
+            <div class="cinta-scroll">
+                <span>EVIDENCIAS DEL CRIMEN - PISTAS DISPONIBLES -</span>
+                <span>EVIDENCIAS DEL CRIMEN - PISTAS DISPONIBLES -</span>
+            </div>
+        </div>
+
+        <div id="Pistas">
+            <section class="texto">
+                <h1><u><i>Pistas</i></u></h1>
+                <div class="pistas">
+                    <div class="card-pista" onclick="voltearPista(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./imgs/Lupa.png" alt="Pista 1">
+                            </div>
+                            <div class="card-back">
+                                <img src="./imgs/clues/Pañuelo_con_Sangre.png" alt="Pañuelo Manchado">
+                                <p>Pañuelo de Cuerva manchado de sangre.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-pista" onclick="voltearPista(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./imgs/Lupa.png" alt="Pista 2">
+                            </div>
+                            <div class="card-back">
+                                <img src="./imgs/clues/Contrato_Arrugado.png" alt="Contrato del pingüino">
+                                <p>Un contrato arrugado de Pingüino firmado por sí mismo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-pista" onclick="voltearPista(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./imgs/Lupa.png" alt="Pista 3">
+                            </div>
+                            <div class="card-back">
+                                <img src="./imgs/clues/Botella_Lejia.png" alt="Botella de Legia">
+                                <p>Una botella de lejía con una huella.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-pista" onclick="voltearPista(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./imgs/Lupa.png" alt="Pista 4">
+                            </div>
+                            <div class="card-back">
+                                <img src="./imgs/clues/Cuchillo_de_cocina.png" alt="Cuchillo con Sangre">
+                                <p>Un cuchillo de cocina con restos de sangre.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>

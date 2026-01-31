@@ -45,7 +45,8 @@ hr.especial {
   margin: 5px;
 }
 
-.texto h2 {
+.texto h2,
+.texto h1 {
   font-family: "Belgrano", serif;
   font-weight: bold;
   text-align: center;
@@ -67,6 +68,20 @@ hr.especial {
   padding: 12px 0;
   margin: 40px -10%;
   transform: rotate(-3deg);
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  display: flex;
+}
+
+.cinta-policial-izq {
+  background: #ffd700;
+  color: #000;
+  font-family: 'Arial Black', sans-serif;
+  padding: 12px 0;
+  margin: 40px -10%;
+  transform: rotate(3deg);
   border-top: 3px solid #000;
   border-bottom: 3px solid #000;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
@@ -321,6 +336,100 @@ summary::-webkit-details-marker {
 
 .avatar-relacion:active {
   transform: scale(1.2);
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+.pistas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(80px, 1fr));
+  padding: 10px;
+  justify-content: center;
+  justify-items: center;
+  gap: 10px;
+}
+
+.card-pista {
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.card-pista.is-flipped .card-inner {
+  transform: rotateY(180deg);
+  animation: destelloDescubrimiento 0.8s ease-out forwards;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 1px solid #333;
+  overflow: hidden;
+}
+
+.card-front {
+  background-color: #1a1a1a;
+  z-index: 2;
+}
+
+.card-back {
+  background-color: #2a2a2a;
+  transform: rotateY(180deg);
+  border-color: #ff4500;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back p {
+  color: #ffd700;
+  font-size: 0.6rem;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 0px 5px;
+}
+
+.card-pista img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+@keyframes destelloDescubrimiento {
+  0% {
+    box-shadow: 0 0 0px #ffd700;
+    border-radius: 15px;
+  }
+
+  50% {
+    box-shadow: 0 0 20px #ffd700;
+    border-radius: 15px;
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+    border-radius: 15px;
+  }
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
