@@ -29,7 +29,7 @@ hr.especial {
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-.historia .texto {
+.texto {
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -37,7 +37,7 @@ hr.especial {
   padding: 0px 10px;
 }
 
-.historia .texto h4 {
+.texto h4 {
   font-family: "Belgrano", serif;
   font-weight: 400;
   font-style: normal;
@@ -45,7 +45,15 @@ hr.especial {
   margin: 5px;
 }
 
-.historia .texto .columnas {
+.texto h2 {
+  font-family: "Belgrano", serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+.columnas {
   column-count: 2;
   column-gap: 20px;
 }
@@ -313,4 +321,14 @@ summary::-webkit-details-marker {
 
 .avatar-relacion:active {
   transform: scale(1.2);
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+footer {
+  text-align: center;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: black;
+  color: #666;
 }
