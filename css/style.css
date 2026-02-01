@@ -449,6 +449,38 @@ summary::-webkit-details-marker {
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+.zona-secreta {
+  text-align: center;
+  margin: 30px;
+  background: linear-gradient(to bottom, transparent, #000);
+}
+
+#btn-misterio {
+  background-color: #000000;
+  /* Rojo oscuro sangre */
+  color: rgb(0, 0, 0);
+  border: 2px solid #ffff00;
+  padding: 15px 30px;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+#btn-misterio:hover {
+  background-color: #ffff00;
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+}
+
+#btn-misterio i {
+  margin-right: 10px;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 footer {
   text-align: center;
   margin-top: 5px;
